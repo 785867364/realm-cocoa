@@ -43,7 +43,7 @@ class SwiftObject: RLMObject {
     dynamic var doubleCol = 12.3
     dynamic var stringCol = "a"
     dynamic var binaryCol = "a".data(using: String.Encoding.utf8)
-    dynamic var dateCol = NSDate(timeIntervalSince1970: 1)
+    dynamic var dateCol = Date(timeIntervalSince1970: 1)
     dynamic var objectCol = SwiftBoolObject()
     dynamic var arrayCol = RLMArray(objectClassName: SwiftBoolObject.className())
 }
@@ -56,8 +56,8 @@ class SwiftOptionalObject: RLMObject {
 //    dynamic var optDoubleCol: Double?
     dynamic var optStringCol: String?
     dynamic var optNSStringCol: NSString?
-    dynamic var optBinaryCol: NSData?
-    dynamic var optDateCol: NSDate?
+    dynamic var optBinaryCol: Data?
+    dynamic var optDateCol: Date?
     dynamic var optObjectCol: SwiftBoolObject?
 }
 
@@ -75,7 +75,7 @@ class SwiftAggregateObject: RLMObject {
     dynamic var floatCol = 0 as Float
     dynamic var doubleCol = 0.0
     dynamic var boolCol = false
-    dynamic var dateCol = NSDate()
+    dynamic var dateCol = Data()
 }
 
 class SwiftAllIntSizesObject: RLMObject {
